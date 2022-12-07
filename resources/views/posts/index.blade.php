@@ -15,12 +15,16 @@
 
     <div class="posts">
         @foreach($posts as $post)
+         
             <div class="post">
                 <h3 class="title">{{$post->title}}</h3>
-                <p class="body">{{$post->body}}</p>
+                <p class="body">{{$post->body}}updated_at:{{$post->updated_at}}</p>
             </div>
+            
         @endforeach
     </div>
+    
+    <div>class="paginete">{{ $posts->links()}}</div>
 </body>
 
 </html>

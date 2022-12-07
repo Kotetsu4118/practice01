@@ -10,8 +10,15 @@ class PostController extends Controller
     
     
     public function index(Post $post)
+    // Post（というModel）を$postという変数にぶち込む
     {
-        return $post->get();
+        return view('posts/index')->with(['posts'=>$post->getPaginateByLimit()]);
+    
+        /*
+            view('XXX/XXX'):引数で指定したviewを呼び出す
+            with([]):[]内の条件で取得する
+            
+        */
     }
 
     

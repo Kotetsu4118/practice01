@@ -17,7 +17,7 @@
         @foreach($posts as $post)
          
             <div class="post">
-                <h3 class="title">{{$post->title}}</h3>
+                <a href="/posts/{{$post->id}}"><h3 class="title">{{$post->title}}</h3></a>
                 <p class="body">{{$post->body}}updated_at:{{$post->updated_at}}</p>
             </div>
             

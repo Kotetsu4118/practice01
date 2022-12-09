@@ -7,9 +7,10 @@
 </head>
 
 <body>
-    <form action="/posts" method="POST">
+    {{--formタグではPUTメソッドを使えない--}}
+    <form action="/posts/{{$post->id}}" method="POST">
         @csrf
-        
+        @method("PUT")
         
         <div class="title">
             タイトル：<br>

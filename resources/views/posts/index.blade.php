@@ -12,7 +12,9 @@
         <div>XXX XXX XXX XXX XXX</div>
         <hr>
     </p>
-
+    
+    <a href='/posts/create'>create</a>
+    
     <div class="posts">
         @foreach($posts as $post)
          

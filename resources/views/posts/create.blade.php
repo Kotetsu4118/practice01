@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <title>show</title>
+    <meta charset="utf-8">
+    <title>Blog</title>
 </head>
 
-<body style="padding: 0 10px;">
-    <div>
-        <form action="/posts" method="post">
-            @csrf
-            <p>
-                入力：<br>
-                <textarea name="post[title]" cols="30" rows="3" placeholder="タイトル"></textarea>
-            </p>
-            <p>
-                本文：<br>
-                <textarea name="post[body]" cols="30" rows="10" placeholder="本文"></textarea>
-            </p>
-                <input type="submit" value="保存"/>
-        </form>
-    </div>
+<body>
     
-    <div style="position: absolute; left: 10px; bottom: 50px;">
-        <button>Back to Home</button>
+    <form action="/posts" method="POST">
+        @csrf
+        
+        
+        <div class="title">
+            タイトル：<br>
+            <textarea name="post[title]" cols="30" rows="3" placeholder="タイトル"></textarea>
+        </div>
+        
+        <div class="body">
+            本文：<br>
+            <textarea name="post[body]" cols="30" rows="10" placeholder="本文"></textarea>
+        </div>
+        
+        <input type="submit" value="保存"/>
+    </form>
+
+    
+    <div class="footer">
+        <button onclick="location.href='/'">Back to Home</button>
     </div>
 
 </body>

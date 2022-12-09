@@ -14,7 +14,7 @@
         <p class="content">{{$post->body}}</p> <!-- {{--後で変数に変更 --}} -->
     </div>
     
-    <div style="position: absolute; left: 10px; bottom: 50px;">
+    <div class="footer">
         <button onclick="location.href='/'">Back to Home</button>
     </div>
 

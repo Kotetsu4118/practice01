@@ -14,12 +14,14 @@
         
         <div class="title">
             タイトル：<br>
-            <textarea name="post[title]" cols="30" rows="3" placeholder="タイトル"></textarea>
+            <textarea name="post[title]" cols="30" rows="3" placeholder="タイトル">{{ old('post.title') }}</textarea>
+            <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
         </div>
         
         <div class="body">
             本文：<br>
-            <textarea name="post[body]" cols="30" rows="10" placeholder="本文"></textarea>
+            <textarea name="post[body]" cols="30" rows="10" placeholder="本文">{{ old('post.body') }}</textarea>
+            <p class="body__error" style="color:red">{{ $errors->first('post.body') }}</p>
         </div>
         
         <input type="submit" value="保存"/>

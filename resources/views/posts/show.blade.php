@@ -14,9 +14,14 @@
         <p class="content">{{$post->body}}</p> <!-- {{--後で変数に変更 --}} -->
     </div>
     
+    
+    <div class="edit"><a href="/posts/{{ $post->id }}/edit">edit</a></div>
+    
     <div class="footer">
         <button onclick="location.href='/'">Back to Home</button>
     </div>
+    
+    
 
 </body>
 
